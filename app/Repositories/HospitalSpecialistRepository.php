@@ -1,7 +1,14 @@
 <?php
 namespace App\Repositories;
 
+use App\Models\HospitalSpecialist;
+
 class HospitalSpecialistRepository
 {
-    // Define your methods and properties for the SpecialistRepository here
+    public function existsForHospitalAndSpecialist(int $hospitalId, int $specialistId): bool
+    {
+        return HospitalSpecialist::where('hospital_id', $hospitalId)
+            ->where('specialist_id', $specialistId)
+            ->exists();
+    }
 }
