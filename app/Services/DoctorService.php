@@ -135,8 +135,6 @@ class DoctorService
 
         return $availability;
     }
-        
-
 }
 
 
