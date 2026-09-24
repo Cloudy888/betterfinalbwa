@@ -43,7 +43,7 @@ class HospitalController extends Controller
         return response()->json(new HospitalResource($hospital), 201);
     }
 
-        public function update(HospitalRequest $request, int $id)
+    public function update(HospitalRequest $request, int $id)
     {
         try {
             $hospital = $this->hospitalService->update($id, $request->validated());

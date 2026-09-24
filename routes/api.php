@@ -17,6 +17,7 @@ Route::apiResource('specialists', SpecialistController::class);
 Route::apiResource('doctors', DoctorController::class);
 Route::apiResource('hospitals', HospitalController::class);
 
+// {hospital} = id hospital, 1,2,3 ...
 Route::post('hospitals/{hospital}/specialists', [HospitalSpecialistController::class, 'attach']);
 Route::delete('hospitals/{hospital}/specialists/{specialist}', [HospitalSpecialistController::class, 'detach']);
 
