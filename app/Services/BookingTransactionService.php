@@ -79,6 +79,8 @@ class BookingTransactionService
         if (isset($data['proof']) && $data['proof'] instanceof UploadedFile) {
             $data['proof'] = $this->uploadedProof($data['proof']);
         }
+        
+        return $this->bookingTransactionRepository->create($data);
    }
 
     private function uploadedProof(UploadedFile $file)
