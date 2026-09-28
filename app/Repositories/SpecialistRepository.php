@@ -7,7 +7,7 @@ class SpecialistRepository
 {
     public function getall(array $fields)
     {
-        return Specialist::select($fields)->latest()->with(['hospital','doctors'])->paginate(10);
+        return Specialist::select($fields)->latest()->with(['hospitals','doctors'])->paginate(10);
     }
 
     public function getById(int $id, array $fields)
