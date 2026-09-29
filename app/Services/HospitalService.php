@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use app\Repositories\HospitalRepository;
+use App\Repositories\HospitalRepository;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 

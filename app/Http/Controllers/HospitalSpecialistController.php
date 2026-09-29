@@ -17,7 +17,7 @@ class HospitalSpecialistController extends Controller
     public function attach(Request $request, int $hospitalId)
     {
         $request->validate([
-            'specialist_id' => 'required|exists:specialist,id',
+            'specialist_id' => 'required|exists:specialists,id',
         ]);
 
         $this->hospitalService->attachSpecialist(

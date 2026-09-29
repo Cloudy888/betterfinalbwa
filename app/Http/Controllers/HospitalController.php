@@ -28,7 +28,7 @@ class HospitalController extends Controller
     {
         try {
             $fields = ['*'];
-            $hospital = $this->hospitalService-> getById($id, $fields);
+            $hospital = $this->hospitalService->getById($id, $fields);
             return response()->json(new HospitalResource($hospital));
         } catch (ModelNotFoundException $e){
             return response()->json([

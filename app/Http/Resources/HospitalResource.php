@@ -27,10 +27,10 @@ class HospitalResource extends JsonResource
             'phone' => $this->phone,
 
             'doctors_count' => $this->doctors->count(),
-            'specialist_count' => $this->specialist->count(),
+            'specialist_count' => $this->specialists->count(),
 
             'doctors' => DoctorResource::collection($this->whenLoaded('doctors')),
-            'specialist' => SpecialistResource::collection($this->whenLoaded('specialist')),
+            'specialists' => SpecialistResource::collection($this->whenLoaded('specialists')),
         ];
     }
 }
