@@ -119,7 +119,7 @@ class DoctorService
 
         foreach ($dates as $date) {
             $dateStr = $date->toDateString();
-            $availability = [$dateStr] = [];
+            $availability[$dateStr] = [];
 
             foreach ($timeSlots as $time) {
                 $isTaken = $doctor->bookingTransactions()

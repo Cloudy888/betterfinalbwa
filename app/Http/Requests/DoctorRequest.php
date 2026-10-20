@@ -24,7 +24,8 @@ class DoctorRequest extends FormRequest
         $id = $this->route('doctor');
         
         return [
-            'name' => 'required|string|unique:hospitals,name,' . $id,
+            'name' => 'required|string',
+            // 'name' => 'required|string|unique:doctors,name,' . $id,
             'photo' => $this->isMethod('post') ? 'required|image|max:2048' : 'sometimes|image|max:2048',
             'about' => 'required|string',
             'yoe' => 'required|integer|min:0',
