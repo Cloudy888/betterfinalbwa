@@ -56,7 +56,7 @@ class BookingTransactionRepository
     {
         return BookingTransaction::where('doctor_id', $doctorId)
             ->where('started_at', $date)
-            ->where('time', $time)
+            ->where('time_at', $time)
             ->exists();
     }
 }

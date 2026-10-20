@@ -28,5 +28,5 @@ Route::get('/doctors-filter', [DoctorController::class, 'filterBySpecialistAndHo
 Route::get('/doctors/{doctorId}/available-slots', [DoctorController::class, 'availableSlots']);
 
 Route::get('my-orders', [MyOrderController::class, 'index']);
-Route::get('my-orders', [MyOrderController::class, 'store']);
+Route::post('my-orders', [MyOrderController::class, 'store']);
 Route::get('my-orders/{id}', [MyOrderController::class, 'show']);
