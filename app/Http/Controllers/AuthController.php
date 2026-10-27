@@ -7,6 +7,7 @@ use App\Http\Requests\RegisterRequest;
 use App\Services\AuthService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\UserResource;
 
 class AuthController extends Controller
 {
@@ -26,12 +27,12 @@ class AuthController extends Controller
 
     public function login(LoginRequest $request)
     {
-        $user = $this->authService->login($request->validated());
+        return $this->authService->login($request->validated());
     }
 
     public function tokenLogin(LoginRequest $request)
     {
-        $user = $this->authService->tokenLogin($request->validated());
+        return $this->authService->tokenLogin($request->validated());
     }
 
     public function logout(Request $request)
